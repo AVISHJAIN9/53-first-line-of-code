@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Line of Code — Where It All Begins</title>
+  <meta name="description" content="A tribute to the foundational spark of every software engineer: the first line of code.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(22, 30, 46, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.3);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1), transparent 50%);
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.lead {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+    .terminal-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-glow);
+      text-align: left;
+      margin-bottom: 2.5rem;
+    }
+    .terminal-header {
+      background: rgba(15, 23, 42, 0.8);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot.red { background: #ef4444; }
+    .dot.yellow { background: #eab308; }
+    .dot.green { background: #22c55e; }
+    .terminal-title {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-family: 'Fira Code', monospace;
+      margin-left: 0.5rem;
+    }
+    .terminal-body {
+      padding: 1.5rem;
+      font-family: 'Fira Code', monospace;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .keyword { color: #f43f5e; }
+    .func { color: #38bdf8; }
+    .string { color: #4ade80; }
+    .comment { color: #64748b; font-style: italic; }
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1.1em;
+      background: var(--accent);
+      vertical-align: text-bottom;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .stat-card {
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .stat-val {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .stat-lbl {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+    footer {
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Project 53 Showcase</div>
+    <h1>The First Line of Code</h1>
+    <p class="lead">Every complex distributed engine, kernel, real-time gateway, and full-stack system in this suite started with a single keystroke.</p>
+
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">hello_world.js</span>
+      </div>
+      <div class="terminal-body">
+        <p class="comment">// The beginning of every developer's journey</p>
+        <p><span class="keyword">const</span> greeting = <span class="string">"Hello, World!"</span>;</p>
+        <p><span class="func">console</span>.<span class="func">log</span>(greeting);</p>
+        <br>
+        <p class="comment">// 53 repositories later...</p>
+        <p><span class="keyword">const</span> ecosystem = <span class="func">deployProductionSystems</span>();</p>
+        <p><span class="func">console</span>.<span class="func">log</span>(<span class="string">`Deployed ${ecosystem.length} services live.`</span>);<span class="cursor"></span></p>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-val">53</div>
+        <div class="stat-lbl">Engineered Repositories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">Automated CI/CD Validation</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">200 OK</div>
+        <div class="stat-lbl">Live Production Health</div>
+      </div>
+    </div>
+
+    <footer>
+      Crafted with precision &bull; AVISHJAIN9 Portfolio Ecosystem
+    </footer>
+  </div>
+</body>
+</html>
